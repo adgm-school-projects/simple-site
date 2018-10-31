@@ -1,0 +1,948 @@
+/* ==================================== /
+		Legacy Support for HTML5
+/ ===================================== */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+	display: block;
+}
+
+
+/* =========================== /
+		Global Styles
+/ ============================*/
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0 auto; 
+	padding: 0; 
+	font-family: 'VT323', cursive;
+	background-color: #000;
+	height: 100%;
+	overflow-x:hidden;
+ } 
+
+ .container {
+	max-width: 1280px;
+	height:100%;
+	clear:both;
+	margin:0 auto;
+ }
+
+/* CLEARFIX */
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear:both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+/* ========================================== /
+		Header Styles
+/ ========================================== */
+
+#header {
+	background: url(../images/congruent_outline.png);
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 2px solid #999;
+	z-index: 3;
+	min-height:110px;
+
+}
+
+.banner {
+	width:1280px;
+	height:109px;
+	position:relative;
+	overflow:hidden;
+}
+
+.banner img {
+	width:900px;
+	height:400px;
+	margin:0 auto;
+	position:absolute;
+	top:-150px;
+}
+
+.banner img:hover, .banner img:focus {
+	opacity:.6;
+}
+
+.searchbar {
+	margin-right:1em;
+	display:inline-block;
+	position:absolute;
+	right:0;
+	padding:10px;
+}
+
+#realsidebar form {
+	padding:10px;
+}
+
+/* ========================================== /
+		Extend the Header background
+/ ========================================== */
+
+#header:before, #header:after {
+  content: "";
+  position: absolute;
+background: url(../images/congruent_outline.png);  /* Match the background */
+border-bottom: 2px solid #999;
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+  height:100%;
+	box-shadow: 2px 0 2px #000, -2px 0 2px #000;
+	opacity:.8;
+} 
+#header:before {
+  right: 100%; 
+}
+#header:after {
+  left: 100%;
+}
+
+
+#nav {
+	background: url(../images/congruent_outline.png);
+	border-bottom: 4px ridge red;
+	max-width:100%;
+	clear:both;
+	position: relative;
+	z-index: 3;
+	font-family: "Press Start 2P", cursive;
+	min-height:45px;
+}
+
+/* ========================================== /
+		Extend the Nav background
+/ ========================================== */
+
+#nav:before, #nav:after {
+  content: "";
+  position: absolute;
+background: url(../images/congruent_outline.png);  /* Match the background */
+border-bottom: 3px ridge red;
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+  height:100%;
+	box-shadow: 2px 0 2px #000, -2px 0 2px #000;
+	opacity:.8;
+} 
+#nav:before {
+  right: 100%; 
+}
+#nav:after {
+  left: 100%;
+}
+
+/* ========================================== /
+		Background Styles
+/ ========================================== */
+
+#wrapper {
+	height: 100%;
+	margin: 0 auto;
+	position: fixed;
+	background-image: url(../images/jinx_bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	overflow: hidden;
+}
+
+/* Different backgrounds per page */
+.wrapperpod {
+ background-image: url(../images/annie_bg.jpg) !important;
+}
+
+.wrappervid {
+ background-image: url(../images/ziggs_bg.jpg) !important;
+}
+
+.wrapperstream {
+ background-image: url(../images/graves_bg.jpg) !important;
+}
+
+.wrapperabout {
+ background-image: url(../images/heimer_bg.jpg) !important;
+}
+/* ========================================== /
+		Extend the Boundary background
+/ ========================================== */
+
+#boundary:before, #boundary:after {
+  content: "";
+  position: absolute;
+	background: rgba(0,0,0,0.7);  /* Match the background */
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+  height:100%;
+	box-shadow: 2px 0 2px #000, -2px 0 2px #000;
+} 
+#boundary:before {
+  right: 100%; 
+}
+#boundary:after {
+  left: 100%;
+}
+
+/* ========================================== /
+		Main Content Styles
+/ ========================================== */
+
+/* Boundary encloses all the important page content. Boundary is very important */
+
+#boundary {
+	position:relative;
+	max-width: 1280px;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,0.8);
+	min-height:900px;
+	height: 100%;
+	z-index:1;
+	padding-top:3.5em;
+}
+
+#main {
+	float:left;
+	margin:1em 0 1em 1em;
+	padding: 0 2em;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+	box-shadow: inset 2px 2px 2px #000, inset -2px -2px 2px #000;
+	height:50%;
+	width:65%;
+	overflow:auto;
+}
+
+article {
+	margin: 0 auto;
+	height: auto;
+	width: auto;
+	position: relative;
+	max-height: 700px;
+}
+
+article h2 {
+	display:inline-block;
+	margin-left: 1em;
+	text-decoration:underline;
+}
+
+article img{
+	float: left;
+	margin: 0.4em;
+}
+
+article p {
+	font-size:1.5em;
+}
+
+/* dlep is the anchored-link image in the article */
+.dlep {
+	float:left;
+	margin-bottom:5px;
+}
+
+.dlep:hover, .dlep:focus {
+	opacity:.5;
+}
+
+/*dllink is a separate link to download the episode, below the article */
+.dllink{
+padding:0.5em;
+background:rgba(200, 200, 200, 0.1);
+float:left;
+font-size:1.3em;
+}
+
+.dllink a {
+	font-family: "Rokkitt", serif;
+}
+
+/* This is the twitter and facebook sharing buttons below the article */
+.socialmedia {
+float:right;
+padding:0;
+margin: 1em auto;
+font-size:.8em;
+width:200px;
+height:28px;
+text-transform:lowercase;
+}
+.socialmedia p {
+	display:inline;
+	text-align:left;
+	line-height:0;
+}
+
+.socialmedia ol {
+	margin-left: 1em;
+}
+
+.socialmedia ol li {
+	float: left;
+	list-style: none;
+	position: relative;
+	padding: 0;
+	border: 0;
+	width:37px;
+	height:37px;
+	margin: 0 5px;
+	bottom: 2em;
+}
+
+.socialmedia ol li:hover, .socialmedia ol li:focus {
+	opacity: .5;
+}
+
+.socialmedia ol li a img {
+	box-shadow: none;
+}
+
+/* The social media buttons on the video pages are moved to the left */
+.socialvideo {
+	margin-top:1.8em;
+	float:left;
+}
+
+/* ========================================== /
+		'Streams' and 'About Us' page Styles
+/ ========================================== */
+
+.streamsmain {
+	float:left;
+	margin:1em 0 1em 1em;
+	padding: 0 2em;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+	box-shadow: inset 2px 2px 2px #000, inset -2px -2px 2px #000;
+	height:760px !important; /* This is the only important change */
+	width:65%;
+	overflow:auto;
+}
+
+/* ========================================== /
+		Lower Content Bar Styles
+/ ========================================== */
+
+.sidebarlinks {
+	clear:both;
+	position:relative;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+	box-shadow: inset 2px 2px 2px #000, inset -2px -2px 2px #000;
+	height:22%;
+	width:100%;
+	overflow:auto;
+}
+
+
+.sidebarlinks ul li {
+	display:inline-block;
+	padding:0 .5em 4em;
+}
+
+.sidebarlinks ul li > a {
+	-webkit-transform:rotate(0deg);
+	transition: -webkit-transform .5s;
+}
+
+.sidebarlinks ul li > a:hover{
+	margin: 0;
+	background: none;
+	opacity:.5;
+}
+
+/* ========================================== /
+		Aside Styles
+/ ========================================== */
+
+#realsidebar {
+	overflow:hidden;
+	margin:1em 1em 1em 0;
+	float:right;
+	width:25%;
+	height:50%;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 2px #000, -2px -2px 2px #000;
+	box-shadow: inset 2px 2px 2px #000, inset -2px -2px 2px #000;
+}
+
+#realsidebar ul {
+	list-style:none;
+}
+
+#realsidebar ul li {
+	margin: 0;
+	display:inline-block;
+}
+
+#realsidebar h3 {
+	margin:1em;
+	font-size:1.5em;
+	line-height:1.3em;
+}
+
+#realsidebar form {
+	margin-left:2em;
+}
+
+.socialsidebar {	
+	text-align:left;
+	display:block;
+}
+
+.socialsidebar:hover, .socialsidebar:focus {
+	opacity:.5;
+}
+
+.socialsidebar p {
+	line-height:0em;
+}
+
+.socialsidebar:hover p, .socialsidebar:focus p {
+	color:red;
+}
+
+
+/* ========================================== /
+		Drop-down Menu
+/ ========================================== */
+
+/* hide sub-menus */
+#nav ul ol {
+	list-style: none;
+	visibility:hidden;
+	background: url(../images/congruent_outline.png);
+	border-radius: 0 0 10px 10px;
+	transition: all 0s ease;
+	-webkit-transform: scale(0.01,0);
+	transform: scale(0.01,0);
+	box-shadow: 1px 1px 1px #000, -1px 0 1px #000;
+}
+
+/*reveal sub-menus on hover */
+
+#nav ul li:hover ol, #nav ul li:focus ol{
+	list-style: none;
+	visibility: visible;
+	display: block;
+	color: #fff;
+	position: absolute;
+	opacity: 1;
+	z-index: 1;
+	-webkit-transform: scale(1,1);
+		transform: scale(1,1);
+	margin:0px;
+	padding:0px;
+	transition: all .3s ease;
+
+}
+
+/* Styling the parent menu */
+#nav ul {
+	float:left;
+	margin: 0 auto;
+	list-style: none;
+	position: relative; /* Allows positioning the sub-menu according to the main menu */
+	display: inline-block; /* Adjusts the width of the menu */
+	padding: 0;
+	margin-left:2px;
+}
+
+#nav ul li {
+	text-align: center;
+	width: 190px;
+	float: left; /* Positions the menu to the left */
+	border-right: 1px solid #999;
+	height:100%;
+	box-shadow:1px 0 1px #000;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+
+#nav ul ol li{
+	width:190px;
+	border: none;
+	padding-top: 5px;
+}
+
+#nav ul li a {
+	position: relative;
+	padding: 15px 10px 10px 10px;
+	display: block;
+	height: 100%;
+	text-align:center;
+}
+
+#nav ul li:hover, #nav ul li:focus {
+	color: red;
+	background:#999;
+}
+
+
+#nav ul li:hover > ol li, #nav ul li:focus > ol li {
+	float: none;	/*overwrites the parent's left float */
+	display: block;	
+	background:none;
+}
+
+#nav ul li {
+	position: relative;
+}
+
+#nav ul li ol {
+	position: absolute;	/* Allows the drop-down sub-menu to float */
+	overflow: hidden;
+}
+
+#nav ul li ol li a {
+	border-bottom: 1px dotted #999;
+	font-family: "Rokkitt", serif;
+	font-size: 150%;
+}
+
+#nav ul li:last-child {
+
+}
+
+#nav ul li ol li:last-child a {
+	border: none;
+}
+
+
+/* =========================== /
+		Global Text Styles
+/ ============================*/
+
+p {
+	color: #fff;	
+	font-size: 1.5em;
+	line-height: 1.2;
+	font-family: "Rokkitt", serif;
+	text-shadow: 1px 2px 2px #000;
+ }
+
+h1 { 
+	color: #ed1c24; 
+	font-size: 2.5em; 
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-shadow: 1px 2px 2px #000;
+
+ }
+
+h2 {
+	color: #ed1c24;
+	font-family: "Press Start 2P", cursive;
+	font-size: 1.5em;
+	text-shadow: 1px 2px 2px #000;
+	text-transform: uppercase;
+	position: relative;
+
+} 
+
+h3 { 
+	color: #ed1c24;
+	font-family: "Press Start 2P", cursive;
+	font-size: 1em;
+	text-shadow: 1px 2px 2px #000;
+	text-transform: uppercase;
+	position: relative;
+
+ }
+ 
+ h4 {
+ 	color: #ed1c24;
+	font-family: "Press Start 2P", cursive;
+	font-size: 1em;
+	text-shadow: 1px 2px 2px #000;
+	text-transform: uppercase;
+	position: relative;
+ }
+ 
+ strong {
+	color: red;
+ }
+ 
+
+/* =========================== /
+		Global Link Styles
+/ ============================*/
+
+a:link
+	{ 
+	color: #fff; 
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 1px 2px 2px #000;
+	
+ }
+
+a:visited
+	{
+	color: #fff; 
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover, a:focus {
+	color:red;
+
+}
+
+a:active {
+	color: #999;
+	text-decoration: none;
+ }
+
+ 
+/* =========================== /
+		Footer Styles
+/ ============================*/
+
+#footer {
+display:inline;
+	font-size:.6em;
+	clear: both;
+	background: rgba(200, 200, 200, 0.1);
+	padding: 1px 1.5em;
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border-top: 2px ridge rgba(200, 200, 200, 0.8);
+	z-index:4;
+}
+
+#footer p {
+	display:inline;
+}
+
+#footer ul {
+	display:inline;
+}
+
+#footer ul li {
+	display:inline;
+	font-size:1.7em;
+	padding: 0 .3em;
+	border-right: 1px dotted #999;
+	border-left: 1px dotted #999;
+}
+
+/* =========================== /
+		Responsive Styles
+/ ============================*/
+
+@media screen and (max-width: 1530px) {
+	#boundary {
+		margin-top: 7%; /* Small change from 5% */
+	}
+}
+
+/* ======================================== /
+		980px - Basically everything changes
+/ ========================================*/
+
+@media screen and (max-width: 1060px) {
+	
+	#header {
+		overflow:hidden;
+	}
+	
+	.banner {
+		float: left;
+	}
+
+	#nav ul {
+		position: relative;
+	}
+	
+	#nav ul li:hover ol {
+		position: absolute;
+		z-index: 5;
+	}
+	
+	.searchbar {
+		visibility:hidden;
+	}
+	
+	
+	#footer {
+		position:fixed;
+		margin-top: 1px;
+		z-index: 2;
+	}
+	
+	#boundary {
+		margin-top:15%;
+		min-height:0;
+		height:700px;
+	}
+	
+	#wrapper {
+		overflow-y:auto;
+	}
+	
+	
+	#main {
+		width:90%;
+		margin:0 auto;
+		height:500px;
+	}
+	
+	article {
+		height:500px;
+	}
+	
+	#realsidebar {
+		width:100%;
+	}
+	
+	.sidebarlinks {
+		height:300px;
+	}
+	
+}
+
+/* =========================== /
+		700px
+/ ============================*/
+
+@media screen and (max-width: 780px) {
+	
+	#header {
+		overflow:hidden;
+	}
+	
+	.banner img {
+		width:300px;
+		height:100px;
+		position:relative;
+		top:0;
+	}
+
+	#nav {
+		height: 10%;  /* Nav height changes */
+	}
+	
+	#nav ul {
+		position: relative;
+	}
+	
+	#nav ul li:hover ol {
+		position: absolute;
+		z-index: 5;
+	}
+	
+	.searchbar {
+		visibility:hidden;
+	}
+	
+	
+	#footer {
+		position:fixed;
+		margin-top: 1px;
+		z-index: 2;
+	}
+	
+	#boundary {
+		margin-top:30%;  /* Boundry margin changes */
+		min-height:0;
+		height:700px;
+	}
+	
+	#wrapper {
+		overflow-y:auto;
+	}
+	
+	
+	#main {
+		width:90%;
+		margin:0 auto;
+		height:500px;
+	}
+	
+	article {
+		height:500px;
+	}
+	
+	#realsidebar {
+		width:100%;
+	}
+	
+	.sidebarlinks {
+		height:300px;
+	}
+	
+}
+
+/* =========================== /
+		500px
+/ ============================*/
+
+@media screen and (max-width: 500px) {
+	
+	#header {
+		overflow:hidden;
+	}
+	
+	.banner img {
+		width:300px;
+		height:100px;
+		position:relative;
+		top:0;
+	}
+
+	#nav {
+		height: 10%;
+	}
+	
+	#nav ul {
+		position: relative;
+	}
+	
+	#nav ul li:hover ol {
+		position: absolute;
+		z-index: 5;
+	}
+	
+	.searchbar {
+		visibility:hidden;
+	}
+	
+	
+	#footer {
+		position:fixed;
+		margin-top: 1px;
+		z-index: 2;
+	}
+	
+	#boundary {
+		margin-top:45%;  /* Boundry margin changes */
+		min-height:0;
+		height:700px;
+	}
+	
+	#wrapper {
+		overflow-y:auto;
+	}
+	
+	
+	#main {
+		width:90%;
+		margin:0 auto;
+		height:500px;
+	}
+	
+	article {
+		height:500px;
+	}
+	
+	#realsidebar {
+		width:100%;
+	}
+	
+	.sidebarlinks {
+		height:300px;
+	}
+	
+}
+
+/* =========================== /
+		300px 
+/ ============================*/
+
+@media screen and (max-width: 440px) {
+	
+	#header {
+		overflow:hidden;
+	}
+	
+	.banner img {
+		width:300px;
+		height:100px;
+		position:relative;
+		top:0;
+	}
+
+	#nav {
+		height: 20%; /* Nav height changes */
+	}
+	
+	#nav ul {
+		position: relative;
+	}
+	
+	#nav ul li:hover ol {
+		position: absolute;
+		z-index: 5;
+	}
+	
+	.searchbar {
+		visibility:hidden;
+	}
+	
+	
+	#footer {
+		position:fixed;
+		margin-top: 1px;
+		z-index: 2;
+	}
+	
+	#boundary {
+		margin-top:100%;  /* Boundry margin at full force */
+		min-height:0;
+		height:700px;
+	}
+	
+	#wrapper {
+		overflow-y:auto;
+	}
+	
+	
+	#main {
+		width:90%;
+		margin:0 auto;
+		height:500px;
+	}
+	
+	article {
+		height:500px;
+	}
+	
+	#realsidebar {
+		width:100%;
+	}
+	
+	.sidebarlinks {
+		height:300px;
+	}
+	
+}
