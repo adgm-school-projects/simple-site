@@ -7,6 +7,6 @@
 * Imported Google Fonts
 * Embedded Twitter feed
 
-[View site on Heroku]()
+[View site on Heroku](https://simple-static-site.herokuapp.com/index.html)
 ___
 Created by Adam Morelli ©2013
